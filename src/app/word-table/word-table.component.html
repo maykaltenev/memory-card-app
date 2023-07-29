@@ -1,16 +1,26 @@
-<table>
+<table class="word-table">
   <thead>
     <tr>
-      <th>Number</th>
-      <th>English</th>
-      <th>Norwegian</th>
+      <th class="table-header">Number</th>
+      <th class="table-header">English</th>
+      <th class="table-header">Norwegian</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let word of words; let i = index">
-      <td>{{ i + 1 }}</td>
-      <td>{{ word.english }}</td>
-      <td>{{ word.norwegian }}</td>
+    <tr *ngFor="let word of words; let i = index" class="table-row">
+      <td class="table-cell">{{ i + 1 }}</td>
+      <td class="table-cell">{{ word.english }}</td>
+      <td class="table-cell">{{ word.norwegian }}</td>
     </tr>
   </tbody>
 </table>
+
+<div class="table-container">
+  <input type="text" placeholder="English word" [(ngModel)]="newEnglishWord" />
+  <input
+    type="text"
+    placeholder="Norwegian word"
+    [(ngModel)]="newNorwegianWord"
+  />
+  <button (click)="addNewWord()">Add word</button>
+</div>
