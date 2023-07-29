@@ -1,0 +1,22 @@
+<!-- card-deck.component.html -->
+<div class="card-deck">
+  <app-card
+    *ngFor="let card of cards; let i = index"
+    [englishWord]="card.english"
+    [norwegianWord]="card.norwegian"
+  ></app-card>
+</div>
+
+<div class="form-toggle">
+  <button (click)="toggleForm()">+</button>
+</div>
+
+<div class="input-container" *ngIf="showForm">
+  <input type="text" placeholder="English word" [(ngModel)]="newEnglishWord" />
+  <input
+    type="text"
+    placeholder="Norwegian word"
+    [(ngModel)]="newNorwegianWord"
+  />
+  <button (click)="addNewWord()">Add text</button>
+</div>

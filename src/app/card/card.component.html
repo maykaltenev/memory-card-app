@@ -1,0 +1,9 @@
+<!-- card.component.html -->
+<div class="card" [class.flipped]="flipped" (click)="onCardClick()">
+  <div class="front">
+    <div class="text">{{ englishWord }}</div>
+  </div>
+  <div class="back">
+    <div class="text">{{ norwegianWord }}</div>
+  </div>
+</div>
