@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>English</th>
+      <th>Norwegian</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let word of words; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ word.english }}</td>
+      <td>{{ word.norwegian }}</td>
+    </tr>
+  </tbody>
+</table>

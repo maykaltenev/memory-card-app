@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Input and Button Styling */
+tr:last-child input[type="text"],
+tr:last-child button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+tr:last-child button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+tr:last-child button:hover {
+  background-color: #4d4d4d;
+}
